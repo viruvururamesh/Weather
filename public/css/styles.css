@@ -1,0 +1,160 @@
+body {   
+    margin:0px;
+    padding: 0px;
+    font-family: 'Lato', sans-serif;
+}
+header {  
+    padding:10px;
+    height:70px;    
+    background-color:darkcyan;   
+    
+}
+header ul li {
+    list-style: none;
+    float: right;
+    padding:15px 30px;    
+    color:#fff;
+    
+  }
+  .firstli {
+      padding-right: 100px;
+  }
+
+header ul li:first-child {
+    float:left;
+    font-size:34px;
+    font-weight: bold;
+    padding-top: 0px;
+}
+header ul li a {
+    text-decoration: none;
+    color:#fff;
+}
+.postcontent {
+    width:75%;
+    height:auto;
+    padding-right: 5%;
+    text-align: justify;
+    
+    float: left;
+}
+.advertisements {
+    width:20%;
+    text-align: center;
+    margin-top:20px;
+    
+    border-radius: 5px;
+    color:#fff;    
+    float: left !important;
+}
+input {
+    margin-top:10px;
+    margin-bottom:10px;
+}
+textarea {
+    margin-top:10px;
+}
+button {
+    background-color: #337ab7;
+    color:#fff;
+    padding:10px;
+    border-radius: 3px;
+    border:0px;
+    margin-top:10px;
+    font-weight: bold;
+}
+
+footer {
+    height:60px;
+    background-color: darkcyan;
+    text-align: center;
+}
+#mainBody {
+    min-height:450px; 
+    width:80%;
+   
+    margin:0 auto;   
+}
+footer p {
+    padding-top:15px;
+    color:#fff;
+}
+.textbox {
+    pointer-events: none;
+    border:none;
+    font-size:24px;
+}
+.postcount {
+    background-color:darkcyan;
+    border-radius: 5px;
+    padding:10px;
+}
+.weather {
+    background-color:#5bc0de;
+    border-radius: 5px;
+    padding:10px;
+    margin-top:10px;
+    color:darkcyan;
+}
+.weather input {
+    border-radius:5px;
+    border:none;
+    padding:5px;
+}
+@media only screen and (max-width: 420px) {
+    header {  padding:0px;
+        margin:0px;
+        
+        height:auto;   
+        background-color:darkcyan;   
+        
+    }
+    header ul  {
+        list-style: none;
+        float: left !important;
+        padding:0px;
+        margin:0px;        
+        background-color:darkcyan;    
+        color:#fff;
+        display: block !important;
+        
+      }
+      header ul li {
+        width:100%;
+        list-style: none;
+        float: left !important;
+        padding:15px 0px;
+        text-align: center;
+        margin:0px;        
+        background-color:darkcyan;    
+        color:#fff;
+        display: block !important;
+        
+      }
+    
+    header ul li:first-child {
+        float: left !important;
+        font-size:34px;
+        font-weight: bold;
+        padding-top: 20px;
+        display: block !important;
+    }
+    header ul li a {
+        text-decoration: none;
+        color:#fff;
+    }
+    .firstli {
+        padding-right: 0px;
+    }
+    footer p {
+        padding-top:15px;
+        color:#fff;
+    }
+    .advertisements
+    {
+        width:100%;
+    }
+    textarea {
+        width:100%;
+    }
+  }

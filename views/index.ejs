@@ -1,0 +1,76 @@
+<%- include ('functionst') -%>
+<%- include ('partials/header') -%>
+
+        <div id="mainBody">
+            <div class="postcontent">
+                <% if(title==="Compose"){ %>
+                    <h2>Compose your blog today</h2>
+                    <form action="/Compose" method="post">
+                        <label>Title</label><br />
+                        <input type="text" name="texpost" value=""><br />
+                        <label>Post</label><br />
+                        <textarea id="w3review" name="textcontent" rows="4" cols="50" class=""></textarea><br />
+                        <button name="submit">Submit</button>
+                    </form>
+                    <%} else if(title==="Myblog") {%>
+                        <h2>Hello My Blog is working</h2> 
+                        <form action="/update" method="POST" id="test" > 
+                       <% for(let i=0;i<postedItems.length;i++){ %>
+                        <div id="<%= postedItems[i].posttitle%>">
+                         
+                            <h4>
+                                <input type="text" class="textbox"  name="name" value="<%= postedItems[i].posttitle %>" ></h4>
+                            <p><%= postedItems[i].postcontent %></p>
+                        
+                           <button onclick="test1('<%= postedItems[i].posttitle %>')">Delete Post</button>
+                           
+                        </div>
+                        
+                   
+                       <% } %>  
+                    </form>                 
+        
+                   <% }  else {%>
+                    <h2><%= title %></h2>
+                    <p><%=titlecontent%></p>
+                
+    
+               <% } 
+               
+                %> 
+                <script>
+                    const test1=(ele)=>{
+                            let x=ele;
+                            let y=document.getElementById("test");
+                            let z=document.getElementsByClassName("textbox");
+                            z1='';
+                            for(let i=0;i<z.length;i++){
+                                if(z[i].value==x){
+                                    z1=z[i].value;                                    
+                                     } 
+                                     else{
+                                     z[i].disabled=true;
+                                     } 
+                                    }                      
+                           
+                        }
+                        </script> 
+            </div>
+            <div class="advertisements">
+                <div class="postcount">
+                <%-include("partials/advertisements") -%>
+                <h1><%= newpostCount %></h1>
+            </div>
+                <div class="weather">
+                   <form method="post" action="/weather" autocomplete="off">
+                    <h3>Find Wethar in your area</h3>
+                    <input type="text" name="pincode" value="" placeholder="Enter your pin" >
+                    <button onclick="test()">FInd weather in Area</button>
+                    </form>
+                    <h4 style="color: blue">Min Temp : <%= temp1 %></h4>
+                    <h4 style="color: blue">Max Temp : <%= temp2 %> </h4>
+                </div>
+            </div>
+        </div>
+        <div style="clear: both;"></div>
+<%- include ('partials/footer') -%>     
